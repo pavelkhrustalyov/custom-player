@@ -1,0 +1,139 @@
+.data_music {
+    text-align: center;
+    background: #fff;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  }
+  .audio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .album_img {
+    overflow: hidden;
+    margin-top: -25px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .album_img img {
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    animation: rotateImg 3s linear infinite;
+    animation-play-state: paused;
+  }
+  
+  .album_img::before {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border: 2px solid #ccc;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 100%;
+    z-index: 100;
+  }
+  
+  .audio-player.play .player-block {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  
+  .audio-player.play .album_img img {
+    animation-play-state: running;
+  }
+  
+  @keyframes rotateImg {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .title {
+    font-family: 'Lobster', cursive;
+  }
+  
+  .data_music {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .player-block {
+    text-align: center;
+    background: #fff;
+    margin: 0 auto;
+    padding: 5px;
+    box-shadow: 0 0px 20px 0 rgba(252, 169, 169, 0.6);
+    width: 300px;
+    border-radius: 5px 5px 0px 0px;
+    transition: transform 0.2s linear, opacity 0.2s linear;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  
+  .heading {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .progress_wrap {
+    width: 80%;
+    background: rgb(247,255,0);
+    height: 4px;
+    margin: 10px auto;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .current_time {
+    z-index: 100;
+  }
+  
+  .controls {
+    display: flex;
+  }
+  
+  .progress {
+    background: steelblue;
+    height: 4px;
+    z-index: 10;
+  }
+  
+  .controls button {
+    cursor: pointer;
+    padding: 8px 20px;
+    border: none;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    outline: none;
+    z-index: 1000;
+    color: azure;
+    background-color: steelblue;
+  }
+  
+  .controls button:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .author {
+    display: block;
+    font-family: 'Dancing Script', cursive;
+  }

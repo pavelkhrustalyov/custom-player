@@ -1,0 +1,27 @@
+.audio_item {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+}
+
+.audio_item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.audio_item .audio_item-data {
+    display: flex;
+    align-items: center;
+}
+
+.audio_item-title {
+    margin-right: 10px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.audio_item-duration {
+    margin-left: 5px;
+}
